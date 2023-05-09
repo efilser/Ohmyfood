@@ -22,6 +22,10 @@ a {
   --tertiaire: #99E2D0;
 }
 
+[type="checkbox"] {
+  display: none;
+}
+
 * {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -50,6 +54,7 @@ body {
 .logo-title {
   font-family: 'Shrikhand', cursive;
   font-size: 1.875rem;
+  color: #101010;
 }
 
 header {
@@ -69,6 +74,7 @@ header {
   display: flex;
   justify-content: center;
   color: #353535;
+  box-shadow: inset 0 3px 3px 0 #D2D2D2;
 }
 
 .localisation input {
@@ -76,6 +82,12 @@ header {
   border: none;
   font-size: 1rem;
   color: #353535;
+  box-shadow: inset 0 3px 3px 0 #D2D2D2;
+}
+
+.localisation input:focus {
+  border: none;
+  outline: none;
 }
 
 .localisation i {
@@ -108,7 +120,7 @@ header {
 }
 
 .fonctionnement {
-  margin: 48px 20px 0 20px;
+  margin: 48px 20px 68px 20px;
 }
 
 .fonctionnement ul {
@@ -116,8 +128,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 25px;
-  margin-top: 26px;
-  margin-bottom: 68px;
+  padding: 26px 20px 0 20px;
 }
 
 .fonctionnement li {
@@ -126,13 +137,13 @@ header {
   align-items: center;
   gap: 27px;
   background-color: #F6F6F6;
-  border: solid 1px #F6F6F6;
   border-radius: 20px;
-  width: 85%;
+  width: 100%;
   height: 73px;
   font-size: 1rem;
   cursor: pointer;
   filter: drop-shadow(0 6px 6px rgba(0,0,0,0.1));
+  position: relative;
 }
 
 .fonctionnement i {
@@ -140,8 +151,8 @@ header {
   margin-left: 35px;
 }
 
-.fonctionnement i:hover,
-.fonctionnement i:focus {
+.fonctionnement li:hover i,
+.fonctionnement li:focus i{
   color: var(--primaire);
 }
 
@@ -167,11 +178,11 @@ header {
 
 .restaurants .title {
   padding-top: 54px;
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
 .restaurants ul {
-  margin: 22px 18px 66px 17px;
+  padding: 22px 18px 66px 17px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -185,6 +196,10 @@ header {
   border-radius: 15px;
 }
 
+.card-content {
+  position: relative;
+}
+
 .card-content img {
   object-fit: cover;
   width: 100%;
@@ -193,7 +208,15 @@ header {
 }
 
 .card-txt {
-  margin-left: 13px;
+  padding: 16px 13px;
+  position: relative;
+}
+
+.like {
+  position: absolute;
+  right: 25px;
+  top: 23px;
+  cursor: cell;
 }
 
 .card-title {
@@ -206,19 +229,14 @@ header {
 }
 
 .new {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 29px;
+  padding: 7px 10px;
   border-radius: 2px;
   background-color: var(--tertiaire);
   color: #008766;
   font-size: 0.875rem;
   position: absolute;
-  right: 10%;
-  margin-top: 12px;
-  margin-right: 12px;
+  right: 12px;
+  top: 12px;
   filter: drop-shadow(0 3px 3px rgba(0,0,0,0.2));
 }
 

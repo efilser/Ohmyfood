@@ -22,5 +22,226 @@ a {
   --tertiaire: #99E2D0;
 }
 
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 /***** Loader *****/
 
+
+
+/***** Header *****/
+
+.main-header {
+  height: 63px;
+}
+
+.logo-title {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.875rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/***** Main *****/
+
+.localisation {
+  background-color: #EAEAEA;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  color: #353535;
+}
+
+.localisation input {
+  background-color: #EAEAEA;
+  border: none;
+  font-size: 1rem;
+  color: #353535;
+}
+
+.localisation i {
+  margin: 17px 17px 17px 99px;
+}
+
+.discover {
+  background-color: #F6F6F6;
+  width: 100%;
+}
+
+.discover .title {
+  margin-top: 39px;
+}
+
+.discover p {
+  margin-bottom: 27px;
+  font-size: 1.125rem;
+}
+
+.discover .explorer {
+  display: inline-block;
+  width: 218px;
+  padding: 13px 0 13px 0;
+  margin-bottom: 57px;
+  border-radius: 25px;
+  color: #FFFFFF;
+  background: linear-gradient(var(--secondaire), var(--primaire));
+  font-size: 1rem;
+}
+
+.fonctionnement {
+  margin: 48px 20px 0 20px;
+}
+
+.fonctionnement ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 26px;
+  margin-bottom: 68px;
+}
+
+.fonctionnement li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 27px;
+  background-color: #F6F6F6;
+  border: solid 1px #F6F6F6;
+  border-radius: 20px;
+  width: 85%;
+  height: 73px;
+  font-size: 1rem;
+  cursor: pointer;
+  filter: drop-shadow(0 6px 6px rgba(0,0,0,0.1));
+}
+
+.fonctionnement i {
+  color: #7E7E7E;
+  margin-left: 35px;
+}
+
+.fonctionnement i:hover,
+.fonctionnement i:focus {
+  color: var(--primaire);
+}
+
+.number-1,
+.number-2,
+.number-3 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  background-color: var(--primaire);
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -13px;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+}
+
+.restaurants .title {
+  padding-top: 54px;
+  margin-left: 20px;
+}
+
+.restaurants ul {
+  margin: 22px 18px 66px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.card {
+  width: 85%;
+  height: 251px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+
+.card-content img {
+  object-fit: cover;
+  width: 100%;
+  height: 174px;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-txt {
+  margin-left: 13px;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.card-subtitle {
+  font-size: 1.063rem;
+}
+
+.new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  background-color: var(--tertiaire);
+  color: #008766;
+  font-size: 0.875rem;
+  position: absolute;
+  right: 10%;
+  margin-top: 12px;
+  margin-right: 12px;
+  filter: drop-shadow(0 3px 3px rgba(0,0,0,0.2));
+}
+
+/***** Footer *****/
+
+footer {
+  background-color: #353535;
+  padding: 22px 25px;
+}
+
+.footer-title {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.125rem;
+  color: #FFFFFF;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 16px;
+}
+
+footer a {
+  color: #FFFFFF;
+}

@@ -66,6 +66,12 @@ header {
 
 /***** Main *****/
 
+[type="checkbox"]:checked ~ .fa-heart{
+  color: red;
+  transition: color 1s;
+}
+
+
 .localisation {
   background-color: #EAEAEA;
   width: 100%;
@@ -106,7 +112,7 @@ header {
   font-size: 1.125rem;
 }
 
-.discover .explorer {
+.explorer {
   display: inline-block;
   width: 218px;
   padding: 13px 0 13px 0;
@@ -115,6 +121,11 @@ header {
   color: #FFFFFF;
   background: linear-gradient(var(--secondaire), var(--primaire));
   font-size: 1rem;
+}
+
+.explorer:hover,
+.explorer:focus {
+  opacity: 0.9;
 }
 
 .fonctionnement {
@@ -140,7 +151,6 @@ header {
   cursor: pointer;
   filter: drop-shadow(0 6px 6px rgba(0,0,0,0.1));
   position: relative;
-  transition: transform 400ms ease-in-out;
 }
 
 .fonctionnement i {
@@ -157,11 +167,6 @@ header {
 
 .fa-store {
   margin-right: 20px;
-}
-
-.fonctionnement li:hover,
-.fonctionnement li:focus {
-  transform: scale(1.07);
 }
 
 .fonctionnement li:hover i,

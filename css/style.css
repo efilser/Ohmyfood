@@ -43,7 +43,54 @@ body {
 
 /***** Loader *****/
 
+@keyframes fading {
+  0%{
+    opacity: 1;
+  }
 
+  35%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.background-loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #EAEAEA;
+  z-index: 9999;
+  animation: fading 3s linear;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes loading {
+  50%{
+    transform: rotate(360deg);
+    border-left: 10px solid var(--secondaire);
+    border-right: 10px solid var(--secondaire);
+    border-top: 10px solid var(--primaire);
+    border-bottom: 10px solid var(--primaire);
+  }
+}
+
+.loader {
+  margin: auto;
+  margin-top: 45vh;
+  border-left: 10px solid var(--primaire);
+  border-right: 10px solid var(--primaire);
+  border-top: 10px solid var(--secondaire);
+  border-bottom: 10px solid var(--secondaire);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: loading 3s ease-in-out;
+}
 
 /***** Header *****/
 
@@ -65,12 +112,6 @@ header {
 }
 
 /***** Main *****/
-
-[type="checkbox"]:checked ~ .fa-heart{
-  color: red;
-  transition: color 1s;
-}
-
 
 .localisation {
   background-color: #EAEAEA;
@@ -120,12 +161,14 @@ header {
   border-radius: 25px;
   color: #FFFFFF;
   background: linear-gradient(var(--secondaire), var(--primaire));
+  filter: drop-shadow(0 6px 6px rgba(0,0,0,0.1));
   font-size: 1rem;
 }
 
 .explorer:hover,
 .explorer:focus {
-  opacity: 0.9;
+  opacity: 0.85;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
 }
 
 .fonctionnement {
@@ -159,14 +202,17 @@ header {
 
 .fa-mobile-screen-button {
   margin-right: 27px;
+  margin-left: 17px;
 }
 
 .fa-list-ul {
   margin-right: 23px;
+  margin-left: 3px;
 }
 
 .fa-store {
   margin-right: 20px;
+  margin-left: 4px;
 }
 
 .fonctionnement li:hover i,
@@ -229,10 +275,25 @@ header {
 }
 
 .like {
+  cursor: cell;
+}
+
+.fa-heart {
   position: absolute;
   right: 25px;
   top: 23px;
-  cursor: cell;
+} 
+
+.heart-checked {
+  background:linear-gradient(var(--secondaire), var(--primaire));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0) rotateY(0deg);
+  transition: all 500ms;
+}
+
+[type="checkbox"]:checked ~ .heart-checked{
+  transform: scale(1) rotateY(360deg);
 }
 
 .card-title {
@@ -314,18 +375,23 @@ footer a {
   footer {
     display: flex;
     flex-direction: row-reverse;
-    gap: 90px;
+    gap: 4%;
     padding: 0;
   }
-
+  
   .footer-title {
-    margin: 57px 25px 30px 0;
+    margin: 57px 32px 30px 0;
   }
-
+  
   footer ul {
     flex-direction: row;
     margin-top: 64px;
     margin-bottom: 30px;
+    gap: 8px;
+  }
+
+  footer li:nth-child(2) {
+    margin-right: 16px;
   }
 
 }
@@ -375,6 +441,23 @@ footer a {
 
   .restaurants {
     padding: 30px 180px 30px 180px;
+  }
+
+  /***** Footer *****/
+
+  .footer-title {
+    margin: 57px 64px 30px 0;
+  }
+  
+  footer ul {
+    flex-direction: row;
+    margin-top: 64px;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  footer li:nth-child(2) {
+    margin-right: 20px;
   }
 
 }

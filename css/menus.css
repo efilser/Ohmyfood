@@ -87,6 +87,7 @@ article h1 {
   font-size: 1.75rem;
   color: #101010;
   padding-left: 4px;
+  padding-right: 55px;
   display: flex;
 }
 
@@ -107,6 +108,7 @@ label {
 
 .heart-checked {
   background:linear-gradient(var(--secondaire), var(--primaire));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(0) rotateY(0deg);
@@ -117,10 +119,34 @@ label {
   transform: scale(1) rotateY(360deg);
 }
 
+@keyframes menus-appear {
+  0%{
+    opacity: 0;
+    transform: translate(-210px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 section {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.starters {
+  animation: menus-appear 0.3s ease-in-out both 0.3s;
+}
+
+.main-courses {
+  animation: menus-appear 0.3s ease-in-out both 0.6s;
+}
+
+.desserts {
+  animation: menus-appear 0.3s ease-in-out both 0.9s;
 }
 
 section h2 {
@@ -143,7 +169,7 @@ section li {
   border-radius: 15px;
   background-color: #FFFFFF;
   height: 69px;
-  filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
+  box-shadow: 0 6px 6px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -152,6 +178,12 @@ section li {
 .plate {
   margin: 13px 5px 13px 15px;
   width: 90%;
+}
+
+.plate, section h3, section p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .price {

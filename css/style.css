@@ -286,6 +286,7 @@ header {
 
 .heart-checked {
   background:linear-gradient(var(--secondaire), var(--primaire));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(0) rotateY(0deg);
@@ -299,10 +300,14 @@ header {
 .card-title {
   font-size: 1.125rem;
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-subtitle {
   font-size: 1.063rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .new {

@@ -290,7 +290,7 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(0) rotateY(0deg);
-  transition: all 500ms;
+  transition: all 0.75s;
 }
 
 [type="checkbox"]:checked ~ .heart-checked{

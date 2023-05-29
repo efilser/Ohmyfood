@@ -22,5 +22,447 @@ a {
   --tertiaire: #99E2D0;
 }
 
+[type="checkbox"] {
+  display: none;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 /***** Loader *****/
 
+@keyframes fading {
+  0%{
+    opacity: 1;
+  }
+
+  35%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.background-loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #EAEAEA;
+  z-index: 9999;
+  animation: fading 3s linear;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes loading {
+  50%{
+    transform: rotate(360deg);
+    border-left: 10px solid var(--secondaire);
+    border-right: 10px solid var(--secondaire);
+    border-top: 10px solid var(--primaire);
+    border-bottom: 10px solid var(--primaire);
+  }
+}
+
+.loader {
+  margin: auto;
+  margin-top: 45vh;
+  border-left: 10px solid var(--primaire);
+  border-right: 10px solid var(--primaire);
+  border-top: 10px solid var(--secondaire);
+  border-bottom: 10px solid var(--secondaire);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: loading 3s ease-in-out;
+}
+
+/***** Header *****/
+
+.main-header {
+  height: 63px;
+}
+
+.logo-title {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.875rem;
+  color: #101010;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/***** Main *****/
+
+.localisation {
+  background-color: #EAEAEA;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #353535;
+  box-shadow: inset 0 3px 3px 0 #D2D2D2;
+}
+
+.localisation input {
+  background-color: #EAEAEA;
+  border: none;
+  font-size: 1rem;
+  color: #353535;
+  box-shadow: inset 0 7px 3px -4px #D2D2D2;
+}
+
+.localisation input:focus {
+  border: none;
+  outline: none;
+}
+
+.localisation i {
+  margin: 17px 17px 17px 99px;
+}
+
+.discover {
+  background-color: #F6F6F6;
+  width: 100%;
+}
+
+.discover .title {
+  margin-top: 39px;
+}
+
+.discover p {
+  margin-bottom: 27px;
+  font-size: 1.125rem;
+}
+
+.explorer {
+  display: inline-block;
+  width: 218px;
+  padding: 13px 0 13px 0;
+  margin-bottom: 57px;
+  border-radius: 25px;
+  color: #FFFFFF;
+  background: linear-gradient(var(--secondaire), var(--primaire));
+  filter: drop-shadow(0 6px 6px rgba(0,0,0,0.1));
+  font-size: 1rem;
+}
+
+.explorer:hover,
+.explorer:focus {
+  opacity: 0.85;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
+}
+
+.fonctionnement {
+  margin: 48px 20px 68px 20px;
+}
+
+.fonctionnement ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 26px 20px 0 20px;
+}
+
+.fonctionnement li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  width: 100%;
+  height: 73px;
+  font-size: 1rem;
+  cursor: pointer;
+  filter: drop-shadow(0 6px 6px rgba(0,0,0,0.1));
+  position: relative;
+}
+
+.fonctionnement i {
+  color: #7E7E7E;
+}
+
+.fa-mobile-screen-button {
+  margin-right: 27px;
+  margin-left: 17px;
+}
+
+.fa-list-ul {
+  margin-right: 23px;
+  margin-left: 3px;
+}
+
+.fa-store {
+  margin-right: 20px;
+  margin-left: 4px;
+}
+
+.fonctionnement li:hover i,
+.fonctionnement li:focus i{
+  color: var(--primaire);
+}
+
+.number-1,
+.number-2,
+.number-3 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  background-color: var(--primaire);
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -13px;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+}
+
+.restaurants .title {
+  padding-top: 54px;
+  padding-left: 20px;
+}
+
+.restaurants ul {
+  padding: 22px 18px 66px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card {
+  height: 251px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+
+.card-content {
+  position: relative;
+}
+
+.card-content img {
+  object-fit: cover;
+  width: 100%;
+  height: 174px;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-txt {
+  padding: 16px 13px;
+  position: relative;
+}
+
+.like {
+  cursor: cell;
+}
+
+.fa-heart {
+  position: absolute;
+  right: 25px;
+  top: 23px;
+} 
+
+.heart-checked {
+  background:linear-gradient(var(--secondaire), var(--primaire));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0) rotateY(0deg);
+  transition: all 0.75s;
+}
+
+[type="checkbox"]:checked ~ .heart-checked{
+  transform: scale(1) rotateY(360deg);
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-subtitle {
+  font-size: 1.063rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.new {
+  padding: 7px 10px;
+  border-radius: 2px;
+  background-color: var(--tertiaire);
+  color: #008766;
+  font-size: 0.875rem;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  filter: drop-shadow(0 3px 3px rgba(0,0,0,0.2));
+}
+
+/***** Footer *****/
+
+footer {
+  background-color: #353535;
+  padding: 22px 25px;
+}
+
+.footer-title {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.125rem;
+  color: #FFFFFF;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 16px;
+}
+
+footer a {
+  color: #FFFFFF;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  /***** Main *****/
+
+  .fonctionnement {
+    margin: 48px 30px 68px 30px;;
+  }
+
+  .restaurants {
+    padding: 30px;
+  }
+
+  .restaurants .title {
+    padding: 0;
+  }
+  
+  .restaurants ul {
+    padding: 0;
+    margin-top: 28px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 50px
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  /***** Footer *****/
+
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4%;
+    padding: 0;
+  }
+  
+  .footer-title {
+    margin: 57px 32px 30px 0;
+  }
+  
+  footer ul {
+    flex-direction: row;
+    margin-top: 64px;
+    margin-bottom: 30px;
+    gap: 8px;
+  }
+
+  footer li:nth-child(2) {
+    margin-right: 16px;
+  }
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    /***** Header *****/
+
+.main-header {
+  height: 96px;
+}
+
+  /***** Main *****/
+
+  .discover {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .discover .title {
+    margin-top: 0;
+    font-size: 2.5rem;
+  }
+  
+  .discover p {
+    margin-bottom: 0;
+  }
+  
+  .discover .explorer {
+    margin-bottom: 0;
+  }
+
+  .fonctionnement {
+    margin: 50px 207px 50px 180px;;
+  }
+
+  .fonctionnement ul {
+    flex-direction: row;
+    gap: 24px;
+    padding: 25px 15px 0 15px;
+  }
+
+  .restaurants {
+    padding: 30px 180px 30px 180px;
+  }
+
+  /***** Footer *****/
+
+  .footer-title {
+    margin: 57px 64px 30px 0;
+  }
+  
+  footer ul {
+    flex-direction: row;
+    margin-top: 64px;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  footer li:nth-child(2) {
+    margin-right: 20px;
+  }
+
+}

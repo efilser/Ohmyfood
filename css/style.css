@@ -163,12 +163,14 @@ header {
   background: linear-gradient(var(--secondaire), var(--primaire));
   filter: drop-shadow(0 6px 6px rgba(0,0,0,0.1));
   font-size: 1rem;
+  transition: all 0.4s linear;
 }
 
 .explorer:hover,
 .explorer:focus {
   opacity: 0.85;
   filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
+  transition: all 0.4s linear;
 }
 
 .fonctionnement {
@@ -198,6 +200,7 @@ header {
 
 .fonctionnement i {
   color: #7E7E7E;
+  transition: all 0.4s linear;
 }
 
 .fa-mobile-screen-button {
@@ -218,6 +221,7 @@ header {
 .fonctionnement li:hover i,
 .fonctionnement li:focus i{
   color: var(--primaire);
+  transition: all 0.4s linear;
 }
 
 .number-1,
